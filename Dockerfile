@@ -5,6 +5,7 @@ COPY package-lock.json .
 RUN npm install
 COPY . .
 RUN npm run build
+RUN sleep 1
 
 FROM node:lts-alpine
 WORKDIR /app
